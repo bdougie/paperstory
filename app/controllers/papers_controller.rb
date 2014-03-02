@@ -1,10 +1,10 @@
 class PapersController < ApplicationController
   def index
-  	@paper = Paper.all
+  	@papers = Paper.all
   end
 
   def show
-    @church = Paper.find(params[:id])
+    @paper = Paper.find(params[:id])
   end
 
   def new
@@ -12,7 +12,7 @@ class PapersController < ApplicationController
   end
 
   def edit
-    @church = Paper.find(params[:id])
+    @paper = Paper.find(params[:id])
   end
 
   def create
@@ -36,5 +36,5 @@ class PapersController < ApplicationController
      params.require(:paper).permit(:title, :body)
    end
 
-   
+
  end

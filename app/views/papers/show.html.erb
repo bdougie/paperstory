@@ -1,2 +1,9 @@
-<h1>Papers#show</h1>
-<p>Find me in app/views/papers/show.html.erb</p>
+<% @paper.each do |paper| %>
+
+
+	<h1><%= paper.title %></h1>
+
+	<p><%= paper.body %></p>
+
+<% end %>
+
